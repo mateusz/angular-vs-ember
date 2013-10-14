@@ -1,0 +1,16 @@
+<div class="container">
+	<h1>Endless</h1>
+	<p><span class="glyphicon glyphicon-inbox"></span> showing {{total}} latest messages.</p>
+	<div class="list-group">
+		<listentry ng-repeat="message in messages"
+			listentry-author="{{message.Author}}"
+			listentry-body="{{message.Body}}"
+			listentry-posted="{{message.Posted}}">
+		</listentry>
+	</div>
+	<p ng-show="total>10"><span class="glyphicon glyphicon-inbox"></span> showing {{total}} latest messages.</p>
+	<button type="button" class="btn btn-primary" ng-click="fetchMore(5)">Fetch 5</button>
+	<button type="button" class="btn btn-primary" ng-click="fetchMore(50)">Fetch 50</button>
+	<button type="button" class="btn btn-primary" ng-click="fetchMore(500)">Fetch 500</button>
+	<button type="button" class="btn btn-primary" ng-click="fetchMore(100000)">Fetch all</button>
+</div>
