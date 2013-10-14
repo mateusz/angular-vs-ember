@@ -1,11 +1,7 @@
 
 window.Endless = Ember.Application.create();
 
-// Endless.ApplicationAdapter = DS.FixtureAdapter.extend();
-
-Endless.ApplicationAdapter = DS.RESTAdapter.extend({
-	host: '../../backend/Message_Controller/get'
-});
+Endless.ApplicationAdapter = DS.FixtureAdapter.extend();
 
 // From https://github.com/clintioo/handlebars-date-helpers/blob/master/handlebars-helpers.1.0.0.js
 Handlebars.registerHelper('dateFormat', function(context) {
